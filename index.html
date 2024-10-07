@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>School Site</title>
+    <style>
+        /* Stil pentru imaginea mărită */
+        .fullscreen-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+        }
+        /* Stil personalizat pentru hover-ul elegant */
+      
+    </style>
+</head>
+<body class="">
+  <header class="bg-white py-4">
+    <div class="flex justify-between items-center container px-4 mx-auto">
+      
+      <img src="Captură de ecran 2024-10-04 183007.png" id="small-logo" class="w-16 h-16 cursor-pointer ml-6 rounded-lg mt-4 mb-4" mb-4 alt="LOGO" onclick="openFullscreen()">
+      
+      <img src="coala-densu-high-resolution-logo-grayscale.png" id="fullscreen-logo" class="fullscreen-img" alt="Fullscreen LOGO" onclick="closeFullscreen()">
+      
+      
+      <nav class="w-full text-center">
+        <ul class="inline-flex space-x-12 text-lg font-semibold text-gray-800">
+          <li class="hover:scale-125 transition-transform duration-700 text-2xl"><a href="program.html" class="hover-underline">Program</a></li>
+          <li class="hover:scale-125 transition-transform duration-700 text-2xl"><a href="" class="hover-underline">Profesori</a></li>
+          <li class="hover:scale-125 transition-transform duration-700 text-2xl"><a href="" class="hover-underline">Despre noi</a></li>
+          <li class="hover:scale-125 transition-transform duration-700 text-2xl"><a href="" class="hover-underline">Elevi</a></li>
+          <li class="hover:scale-110 transition-transform duration-700 text-2xl"><a href="" class="hover-underline">Scoala</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="border-t-1 border-black mt-4">
+  </header>
+
+  <script>
+    // Funcția pentru a deschide imaginea mărită
+    function openFullscreen() {
+      document.getElementById('fullscreen-logo').style.display = 'block';
+    }
+
+    // Funcția pentru a închide imaginea mărită
+    function closeFullscreen() {
+      document.getElementById('fullscreen-logo').style.display = 'none';
+    }
+
+    // Ascultă apăsarea tastei "Esc" pentru a închide imaginea mărită
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
